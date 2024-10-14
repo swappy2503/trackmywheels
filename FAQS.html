@@ -1,0 +1,454 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-5680988947395965",
+    enable_page_level_ads: true
+  });
+</script>
+    <title>Track my Wheels || Advanced GPS Tracking Solutions</title>
+    <link rel="shortcut icon" href="images/logo 2.png" type="image/ico">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+    <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <link href="css/blue.css" rel="stylesheet" type="text/css" media="all" />
+    <!----font-Awesome----->
+    <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+    <!----font-Awesome----->
+    <!-- start plugins -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!--start slider -->
+    <link rel="stylesheet" href="css/fwslider.css" media="all">
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/css3-mediaqueries.js"></script>
+    <script src="js/fwslider.js"></script>
+    <!--end slider -->
+    <!-- must have -->
+    <link href="css/allinone_carousel.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
+    <script src="js/jquery.ui.touch-punch.min.js" type="text/javascript"></script>
+    <script src="js/allinone_carousel.js" type="text/javascript"></script>
+    <!--[if IE]><script src="js/excanvas.compiled.js" type="text/javascript"></script><![endif]-->
+    <!-- must have -->
+    <script>
+        jQuery(function () {
+
+            jQuery('#allinone_carousel_charming').allinone_carousel({
+                skin: 'charming',
+                width: 990,
+                height: 454,
+                responsive: true,
+                autoPlay: 3,
+                resizeImages: true,
+                autoHideBottomNav: false,
+                showElementTitle: false,
+                verticalAdjustment: 50,
+                showPreviewThumbs: false,
+                //easing:'easeOutBounce',
+                numberOfVisibleItems: 5,
+                nextPrevMarginTop: 23,
+                playMovieMarginTop: 0,
+                bottomNavMarginBottom: -10
+            });
+        });
+    </script>
+    <!-- Owl Carousel Assets -->
+    <link href="css/owl.carousel.css" rel="stylesheet" />
+    <script src="js/owl.carousel.js"></script>
+    <script>
+			$(document).ready(function() {
+
+				$("#owl-demo").owlCarousel({
+					items : 4,
+					lazyLoad : true,
+					autoPlay : true,
+					navigation : true,
+					navigationText : ["", ""],
+					rewindNav : false,
+					scrollPerPage : false,
+					pagination : false,
+					paginationNumbers : false,
+				});
+
+			});
+    </script>
+    <!-- //Owl Carousel Assets -->
+    <!-- start circle -->
+    <script type="text/javascript">
+        (function ($) {
+            $.fn.percentPie = function (options) {
+
+                var settings = $.extend({
+                    width: 100,
+                    trackColor: "EEEEEE",
+                    barColor: "E2534B",
+                    barWeight: 30,
+                    startPercent: 0,
+                    endPercent: 1,
+                    fps: 60
+                }, options);
+
+                this.css({
+                    width: settings.width,
+                    height: settings.width
+                });
+
+                var that = this,
+			hoverPolice = false,
+			canvasWidth = settings.width,
+			canvasHeight = canvasWidth,
+			id = $('canvas').length,
+			canvasElement = $('<canvas id="' + id + '" width="' + canvasWidth + '" height="' + canvasHeight + '"></canvas>'),
+			canvas = canvasElement.get(0).getContext("2d"),
+			centerX = canvasWidth / 2,
+			centerY = canvasHeight / 2,
+			radius = settings.width / 2 - settings.barWeight / 2;
+                counterClockwise = false,
+			fps = 1000 / settings.fps,
+			update = .01;
+                this.angle = settings.startPercent;
+
+                this.drawArc = function (startAngle, percentFilled, color) {
+                    var drawingArc = true;
+                    canvas.beginPath();
+                    canvas.arc(centerX, centerY, radius, (Math.PI / 180) * (startAngle * 360 - 90), (Math.PI / 180) * (percentFilled * 360 - 90), counterClockwise);
+                    canvas.strokeStyle = color;
+                    canvas.lineWidth = settings.barWeight;
+                    canvas.stroke();
+                    drawingArc = false;
+                }
+
+                this.fillChart = function (stop) {
+                    var loop = setInterval(function () {
+                        hoverPolice = true;
+                        canvas.clearRect(0, 0, canvasWidth, canvasHeight);
+
+                        that.drawArc(0, 360, settings.trackColor);
+                        that.angle += update;
+                        that.drawArc(settings.startPercent, that.angle, settings.barColor);
+
+                        if (that.angle > stop) {
+                            clearInterval(loop);
+                            hoverPolice = false;
+                        }
+                    }, fps);
+                }
+
+                this.mouseover(function () {
+                    if (hoverPolice == false) {
+                        that.angle = settings.startPercent;
+                        that.fillChart(settings.endPercent);
+                    }
+                });
+
+                this.fillChart(settings.endPercent);
+                this.append(canvasElement);
+                return this;
+            }
+        } (jQuery));
+
+        $(document).ready(function () {
+
+            $('.google').percentPie({
+                width: 100,
+                trackColor: "E2534B",
+                barColor: "76C7C0",
+                barWeight: 20,
+                endPercent: .9,
+                fps: 60
+            });
+
+            $('.moz').percentPie({
+                width: 100,
+                trackColor: "E2534B",
+                barColor: "76C7C0",
+                barWeight: 20,
+                endPercent: .75,
+                fps: 60
+            });
+
+            $('.safari').percentPie({
+                width: 100,
+                trackColor: "E2534B",
+                barColor: "#76C7C0",
+                barWeight: 20,
+                endPercent: .5,
+                fps: 60
+            });
+
+        });
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    <div class="header_bg">
+        <div class="container">
+            <div class="header">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="webimg/trackmywheels.png" alt="" width="190px" height="90px" /></a>
+                </div>
+                <div class="h_menu">
+                    <a id="touch-menu" class="mobile-menu" href="#">Menu</a>
+                    <nav>
+		<ul class="menu list-unstyled">
+			<li><a href="index.html" class="parent" title="Home"><span>Home</span></a></li>
+			<li><a href="#">About us</a>
+            <ul class="list-unstyled">
+						<li><a href="about.html">At Glance</a></li>
+						<li><a href="Mission_Vision.html">Vision And Mission</a></li>
+                        <li><a href="values.html">Core Values</a></li>
+                        </ul>
+            
+            </li>
+			<li><a href="#">Services</a>
+            <ul class="list-unstyled">
+						<li><a href="personal_track.html">Personal Tracking</a></li>
+						<li><a href="SchoolBus.html">SchoolBus Tracking</a></li>
+						<li><a href="vehicle_tracking.html">Vehicle Tracking</a></li>
+                        <li><a href="OtherTracking.html">Other Tracking</a></li>
+					</ul>
+            </li>
+			<!-- <li><a href="<%: GetRouteUrl("ProductRoute", null) %>">Products</a>
+			<ul class="sub-menu list-unstyled">
+				<li><a href="<%: GetRouteUrl("Tracker1Route", null) %>">TMV 100</a></li>
+				<li><a href="<%: GetRouteUrl("Tracker2Route", null) %>">TMV 200</a></li>
+				<li><a href="<%: GetRouteUrl("Tracker3Route", null) %>">TMV 300</a>
+					
+				</li>
+			</ul>
+			</li>  -->
+		
+         <li><a href="http://www.trackmywheels.net.in/tracking" target="_blank">Login</a>
+         	<!-- <ul class="sub-menu list-unstyled">
+				<li><a href="http://54.251.122.49/trackmywheels/index.php" target="_blank"">Distributor</a></li>
+				<li><a href="http://54.251.122.49/trackmywheels/index.php" target="_blank">User</a></li>
+                </ul> -->
+         
+         </li>
+        <li><a href="contact.html">Contact</a></li>
+			<li><a href="#">Help</a>
+            
+            <ul class="list-unstyled">
+						<li><a href="FAQS.html">FAQ'S</a></li>
+						<li><a href="#">Download</a></li>
+                        </ul>
+            </li>
+			
+		</ul>
+		</nav>
+                    <script src="js/menu.js" type="text/javascript"></script>
+                </div>
+                <div class="clearfix">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+         <div class="main_bg">
+        <!-- start main -->
+        <div class="container">
+            <div class="main_grid1">
+                <h3 class="style pull-left">
+                    Frequently Asked Questions</h3>
+                <ol class="breadcrumb pull-right">
+                  <li><a href="index.html">Home</a></li>
+                    <li class="active">FAQ'S us</li>
+                </ol>
+                <div class="clearfix">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main_btm1">
+        <!-- start main_btm -->
+        <div class="container">
+            <div class="main about span_of_3">
+                <h3>
+                    1. How does GPS work?
+                </h3>
+                <p class="para">
+                    The Global Positioning System (GPS) is a group of 27 Earth-orbiting. When people
+                    talk about "GPS," they usually mean a GPS receiver. The U.S. military developed
+                    and implemented this satellite network as a military navigation system, but now
+                    let’s everyone use the signals. .</p>
+                <h3>
+                    2. Is the system hard to use?
+                </h3>
+                <p class="para">
+                    Our systems are simple to operate. If you have any questions, our courteous technical
+                    support staff will be glad to assist you.
+                </p>
+                <h3>
+                    3. Is GPS really accurate?
+                </h3>
+                <p class="para">
+                    Our maps are among the most accurate in the industry with a resolution of 44 feet.
+                    Our GPS receiver can locate a position within 50 feet.
+                </p>
+                <h3>
+                    4. Can I conceal the system from my drivers?
+                </h3>
+                <p class="para">
+                    Our units are quite small and are often installed discretely.
+                </p>
+                <h3>
+                    5. How does the Track my wheels tracking solution work?
+                </h3>
+                <p class="para">
+                    Tracker is a wireless communication hardware installed in a vehicle and connected
+                    to an Internet-based asset Location Services, which provides near real-time asset
+                    tracking and fleet management tools for vehicles, fleets, mobile and fixed assets.
+                    Track my wheels`s powerful combination of proven technologies includes: GPS (Global
+                    Positioning System), two-way communication (via text) and easy-to-use, web-based
+                    location mapping software. Track my wheels customers have 24 hour access to their
+                    fleet via the website. Customers can locate a vehicle's present position, see the
+                    vehicle's historical path, and monitor its speed and direction. The Track my wheels
+                    customer can be alerted via SMS on their cellular phone of excessive speeds, vehicle
+                    leaving constraint regions or triggered alarms
+                </p>
+                <h3>
+                    6. What is GeoFencing?
+                </h3>
+                <p class="para">
+                    A GeoFencing allows a customer to define a virtual geographical area to ensure vehicles
+                    do not go outside or into a pre-determined area. If a designated boundary is crossed,
+                    the customer will receive a notification or alert that can be delivered via email
+                    or text. GeoFencing provides greater control for people who are tracking vehicles.
+                    Whether there is a specific route or areas that are "off limits" for safety purposes,
+                    GeoFencing provides peace-of-mind that the GPS tracking devices are showing your
+                    vehicles are where they should be at all times.
+                </p>
+                <h3>
+                    7. What are GPS tracking alerts?
+                </h3>
+                <p class="para">
+                    GPS tracking alerts are unique limits that a customer can set up for their tracked
+                    vehicle. When the limit is broken, an email or text message is sent to the customer.
+                    If a speed limit or a GeoFence, for example, is broken, the customer will be notified.
+                    Depending on which GPS vehicle tracking system or service plan the customer chooses,
+                    they will be alerted to these types of occurrences 30 times per month, 60 times
+                    per month or 200 times per month. A customer will always be allowed to get more
+                    "alerts" per month by paying an additional amount per alert that goes beyond the
+                    current plan they are subscribed to.
+                </p>
+                <h3>
+                    8. What reports are available?
+                </h3>
+                <p class="para">
+                    All SilverStar GPS fleet management reports are available online and are visible
+                    directly after you login. Reports available are for Activity, Alerts, Drive-Time,
+                    Engine On-off, Geo-fence, Idle, Mileage, Point of Interest, Stoppage, Event Summary,
+                    and Over-speeding. Please go to www.sstracking/reports to view details of reports
+                    available
+                </p>
+                <h3>
+                    9. How many vehicles can I track at one time?
+                </h3>
+                <p class="para">
+                    There is no limit to how many vehicles that can be tracked by the SilverStar GPS
+                    fleet management system. Fleet sizes range from 10 to over a 1000 vehicles per fleet.
+                    If you have a large fleet size, do enquire about out bulk pricing.
+                </p>
+                <h3>
+                    10. How do I contact Customer Support?
+                </h3>
+                <p class="para">
+                    Customer Support can be reached via email or (+91) . Customer service is available
+                    24/7 because we understand that fleet emergencies may occur at any time of the day.
+                </p>
+                <h3>
+                    11. Can the SilverStar GPS fleet tracking device be installed covertly without the
+                    drivers' knowledge?
+                </h3>
+                <p class="para">
+                    Employers who own their vehicles have a right to monitor their assets covertly.
+                    GPS Vehicle Tracking lets you catch errant drivers and thefts, and so it always
+                    works better if the drivers do not know where the device is installed so that it
+                    cannot be tampered with.
+                </p>
+                <h3>
+                    12. How many vehicles can I track at one time?
+                </h3>
+                <p class="para">
+                    There is no limit to how many vehicles that can be tracked by the GPS fleet management
+                    system. Fleet sizes range from 10 to over a 1000 vehicles per fleet. If you have
+                    a large fleet size, do enquire about out bulk pricing.
+                </p>
+                <h3>
+                    13. What happens after the warranty?
+                </h3>
+                <p class="para">
+                    A comprehensive annual maintenance contract can be taken for a fixed cost which
+                    covers preventive maintenance as well as components, with the exception of tampering.
+                </p>
+                <h3>
+                    14. What benefits will the Track my wheels tracking solutions bring to me?
+                </h3>
+                <p class="para">
+                    Benefits include improved customer service, increased productivity through better
+                    scheduling, as well as enhanced driver safety and asset protection. The Track my
+                    wheels solutions allows your company to: Enhance customer service
+                </p>
+                <div class="col-md-3 span1_of_3" style="width: 50%">
+                    <ul class="list-unstyled nav_list">
+                        <li><a href="#">Provide better-estimated arrival times. </a></li>
+                        <li><a href="#">Improve on-time delivery by rerouting vehicles. </a></li>
+                        <li><a href="#">Monitor and optimize vehicle customer stops. </a></li>
+                        <li><a href="#">Check for on-route compliance.</a></li>
+                        <li><a href="#">Conduct post-route analysis to improve scheduling. Safeguard drivers
+                            and protect vehicle assets</a></li>
+                        <li><a href="#">Track driver safety by monitoring vehicle speed and travel patterns.</a></li>
+                        <li><a href="#">Monitor vehicle use during and after work hours. </a></li>
+                    </ul>
+                </div>
+                <div class="clearfix">
+                </div>
+            </div>
+            <!----//End-img-cursual---->
+        </div>
+    </div>
+    </div>
+    <div class="footer1_bg">
+        <!-- start footer1 -->
+        <div class="container">
+            <div class="footer1">
+                <div class="copy pull-left" style="height: 55px">
+                    <ul class="menu list-unstyled">
+                        <li class="activate"><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="personal_track.html">Services</a></li>
+                        <!-- <li><a href="<%: GetRouteUrl("ProductRoute", null) %>">Products</a></li> -->
+                        <li><a href="http://www.trackmywheels.net.in/tracking" target="_blank">Login</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="soc_icons pull-right">
+                    <ul class="list-unstyled text-center">
+                        <li><a href="https://twitter.com/Trackmywheels" target="_blank"><i class="fa fa-twitter">
+                        </i></a></li>
+                        <li><a href="http://www.facebook.com/pages/Track-My-Wheels/781947395176949?ref=aymt_homepage_panel"
+                            target="_blank"><i class="fa fa-facebook"></i></a></li>
+                    </ul>
+                </div>
+                <div class="clearfix">
+                </div>
+                <b style="color: white; font-family: Times New Roman; font-size: 14px">© 2015-17 Developed
+                    by Track My Wheels Pvt Ltd. All Rights Reserved.</b>
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,453 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-5680988947395965",
+    enable_page_level_ads: true
+  });
+</script>
+    <title>Track my Wheels || Advanced GPS Tracking Solutions</title>
+    <link rel="shortcut icon" href="images/logo 2.png" type="image/ico">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+    <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <link href="css/blue.css" rel="stylesheet" type="text/css" media="all" />
+    <!----font-Awesome----->
+    <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+    <!----font-Awesome----->
+    <!-- start plugins -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!--start slider -->
+    <link rel="stylesheet" href="css/fwslider.css" media="all">
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/css3-mediaqueries.js"></script>
+    <script src="js/fwslider.js"></script>
+    <!--end slider -->
+    <!-- must have -->
+    <link href="css/allinone_carousel.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
+    <script src="js/jquery.ui.touch-punch.min.js" type="text/javascript"></script>
+    <script src="js/allinone_carousel.js" type="text/javascript"></script>
+    <!--[if IE]><script src="js/excanvas.compiled.js" type="text/javascript"></script><![endif]-->
+    <!-- must have -->
+    <script>
+        jQuery(function () {
+
+            jQuery('#allinone_carousel_charming').allinone_carousel({
+                skin: 'charming',
+                width: 990,
+                height: 454,
+                responsive: true,
+                autoPlay: 3,
+                resizeImages: true,
+                autoHideBottomNav: false,
+                showElementTitle: false,
+                verticalAdjustment: 50,
+                showPreviewThumbs: false,
+                //easing:'easeOutBounce',
+                numberOfVisibleItems: 5,
+                nextPrevMarginTop: 23,
+                playMovieMarginTop: 0,
+                bottomNavMarginBottom: -10
+            });
+        });
+    </script>
+    <!-- Owl Carousel Assets -->
+    <link href="css/owl.carousel.css" rel="stylesheet" />
+    <script src="js/owl.carousel.js"></script>
+    <script>
+			$(document).ready(function() {
+
+				$("#owl-demo").owlCarousel({
+					items : 4,
+					lazyLoad : true,
+					autoPlay : true,
+					navigation : true,
+					navigationText : ["", ""],
+					rewindNav : false,
+					scrollPerPage : false,
+					pagination : false,
+					paginationNumbers : false,
+				});
+
+			});
+    </script>
+    <!-- //Owl Carousel Assets -->
+    <!-- start circle -->
+    <script type="text/javascript">
+        (function ($) {
+            $.fn.percentPie = function (options) {
+
+                var settings = $.extend({
+                    width: 100,
+                    trackColor: "EEEEEE",
+                    barColor: "E2534B",
+                    barWeight: 30,
+                    startPercent: 0,
+                    endPercent: 1,
+                    fps: 60
+                }, options);
+
+                this.css({
+                    width: settings.width,
+                    height: settings.width
+                });
+
+                var that = this,
+			hoverPolice = false,
+			canvasWidth = settings.width,
+			canvasHeight = canvasWidth,
+			id = $('canvas').length,
+			canvasElement = $('<canvas id="' + id + '" width="' + canvasWidth + '" height="' + canvasHeight + '"></canvas>'),
+			canvas = canvasElement.get(0).getContext("2d"),
+			centerX = canvasWidth / 2,
+			centerY = canvasHeight / 2,
+			radius = settings.width / 2 - settings.barWeight / 2;
+                counterClockwise = false,
+			fps = 1000 / settings.fps,
+			update = .01;
+                this.angle = settings.startPercent;
+
+                this.drawArc = function (startAngle, percentFilled, color) {
+                    var drawingArc = true;
+                    canvas.beginPath();
+                    canvas.arc(centerX, centerY, radius, (Math.PI / 180) * (startAngle * 360 - 90), (Math.PI / 180) * (percentFilled * 360 - 90), counterClockwise);
+                    canvas.strokeStyle = color;
+                    canvas.lineWidth = settings.barWeight;
+                    canvas.stroke();
+                    drawingArc = false;
+                }
+
+                this.fillChart = function (stop) {
+                    var loop = setInterval(function () {
+                        hoverPolice = true;
+                        canvas.clearRect(0, 0, canvasWidth, canvasHeight);
+
+                        that.drawArc(0, 360, settings.trackColor);
+                        that.angle += update;
+                        that.drawArc(settings.startPercent, that.angle, settings.barColor);
+
+                        if (that.angle > stop) {
+                            clearInterval(loop);
+                            hoverPolice = false;
+                        }
+                    }, fps);
+                }
+
+                this.mouseover(function () {
+                    if (hoverPolice == false) {
+                        that.angle = settings.startPercent;
+                        that.fillChart(settings.endPercent);
+                    }
+                });
+
+                this.fillChart(settings.endPercent);
+                this.append(canvasElement);
+                return this;
+            }
+        } (jQuery));
+
+        $(document).ready(function () {
+
+            $('.google').percentPie({
+                width: 100,
+                trackColor: "E2534B",
+                barColor: "76C7C0",
+                barWeight: 20,
+                endPercent: .9,
+                fps: 60
+            });
+
+            $('.moz').percentPie({
+                width: 100,
+                trackColor: "E2534B",
+                barColor: "76C7C0",
+                barWeight: 20,
+                endPercent: .75,
+                fps: 60
+            });
+
+            $('.safari').percentPie({
+                width: 100,
+                trackColor: "E2534B",
+                barColor: "#76C7C0",
+                barWeight: 20,
+                endPercent: .5,
+                fps: 60
+            });
+
+        });
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    <div class="header_bg">
+        <div class="container">
+            <div class="header">
+                <div class="logo">
+                    <a href="Home.aspx">
+                        <img src="webimg/trackmywheels.png" alt="" width="190px" height="90px" /></a>
+                </div>
+                <div class="h_menu">
+                    <a id="touch-menu" class="mobile-menu" href="#">Menu</a>
+                    <nav>
+		<ul class="menu list-unstyled">
+			<li><a href="index.html" class="parent" title="Home"><span>Home</span></a></li>
+			<li><a href="#">About us</a>
+            <ul class="list-unstyled">
+						<li><a href="about.html">At Glance</a></li>
+						<li><a href="Mission_Vision.html">Vision And Mission</a></li>
+                        <li><a href="values.html">Core Values</a></li>
+                        </ul>
+            
+            </li>
+			<li><a href="#">Services</a>
+            <ul class="list-unstyled">
+						<li><a href="personal_track.html">Personal Tracking</a></li>
+						<li><a href="SchoolBus.html">SchoolBus Tracking</a></li>
+						<li><a href="vehicle_tracking.html">Vehicle Tracking</a></li>
+                        <li><a href="OtherTracking.html">Other Tracking</a></li>
+					</ul>
+            </li>
+			<!-- <li><a href="<%: GetRouteUrl("ProductRoute", null) %>">Products</a>
+			<ul class="sub-menu list-unstyled">
+				<li><a href="<%: GetRouteUrl("Tracker1Route", null) %>">TMV 100</a></li>
+				<li><a href="<%: GetRouteUrl("Tracker2Route", null) %>">TMV 200</a></li>
+				<li><a href="<%: GetRouteUrl("Tracker3Route", null) %>">TMV 300</a>
+					
+				</li>
+			</ul>
+			</li>  -->
+		
+         <li><a href="http://www.trackmywheels.net.in/tracking" target="_blank">Login</a>
+         	<!-- <ul class="sub-menu list-unstyled">
+				<li><a href="http://54.251.122.49/trackmywheels/index.php" target="_blank"">Distributor</a></li>
+				<li><a href="http://54.251.122.49/trackmywheels/index.php" target="_blank">User</a></li>
+                </ul> -->
+         
+         </li>
+        <li><a href="contact.html">Contact</a></li>
+			<li><a href="#">Help</a>
+            
+            <ul class="list-unstyled">
+						<li><a href="FAQS.html">FAQ'S</a></li>
+						<li><a href="#">Download</a></li>
+                        </ul>
+            </li>
+			
+		</ul>
+		</nav>
+                    <script src="js/menu.js" type="text/javascript"></script>
+                </div>
+                <div class="clearfix">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+      <div class="main_bg">
+        <!-- start main -->
+        <div class="container">
+            <div class="main_grid1">
+                <h3 class="style pull-left">
+                    Contact us</h3>
+                <ol class="breadcrumb pull-right">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active">contact</li>
+                </ol>
+                <div class="clearfix">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main_btm1">
+        <!-- start main_btm -->
+        <div class="container">
+            <div class="contact">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.4436912461056!2d73.81178631415014!3d18.599102871623632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b8ebb89f94dd%3A0x75fbb63947212fb8!2sShivam+Residency!5e0!3m2!1sen!2sin!4v1500958638540"
+                    width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                </iframe>
+                <br />
+                <div class="contact_main">
+                    <div class="col-md-4 company_ad">
+                        <h2>
+                            find Address :</h2>
+                        <address>
+                            <p>
+                                Shivam Residency Office No 302 Third Floor Sinhagad Colony Jawalkar Nagar,</p>
+                            <p>
+                                Near Sudarshan Chowk Pimple Gurav Pune 411061. </p>
+                            <p>
+                                India</p>
+                            <p>
+                                Phone:(+91) 879 313 9032</p>
+                            <p>
+                                Phone: (+91)8793139031 / 9834193706 </p>
+                            <p>
+                                Email: <a href="mailto:trackmywheels.in@gmail.com">trackmywheels.in@gmail.com</a></p>
+                            <p>
+                                Website: <a href="http://www.trackmywheels.in">trackmywheels.in</a></p>
+                            <p>
+                                Follow on: <a href="#">Facebook</a>, <a href="#">Twitter</a></p>
+                        </address>
+                    </div>
+                    <asp:UpdatePanel runat="server">
+                        <ContentTemplate>
+                            <div class="col-md-8">
+                                <div class="contact-form">
+                                    <h2>
+                                        Enquiry
+                                    </h2>
+                                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                            <td colspan="4" align="center">
+                                                <asp:Label Text="" ID="lblError" runat="server" ForeColor="Red" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="lablecontact">
+                                                    Name:</label>
+                                            </td>
+                                            <td>
+                                                <asp:TextBox runat="server" ID="txtName" CssClass="textbox" ToolTip="Enter Name" />
+                                            </td>
+                                            <td>
+                                                <label class="lablecontact">
+                                                EmailID:
+                                            </td>
+                                            <td align="left">
+                                                <asp:TextBox runat="server" ID="txtEmail" CssClass="textbox" ToolTip="Enter Email ID" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="lablecontact">
+                                                Phone No:
+                                            </td>
+                                            <td align="left">
+                                                <asp:TextBox runat="server" ID="txtPhone" CssClass="textbox" ToolTip="Enter Phone No." />
+                                            </td>
+                                            <td>
+                                                <label class="lablecontact">
+                                                Company :
+                                            </td>
+                                            <td align="left">
+                                                <asp:TextBox runat="server" ID="txtCompany" CssClass="textbox" ToolTip="Enter Company Name" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="lablecontact">
+                                                City:
+                                            </td>
+                                            <td align="left">
+                                                <asp:TextBox runat="server" ID="txtCity" CssClass="textbox" ToolTip="Enter City Name" />
+                                            </td>
+                                            <td>
+                                                <label class="lablecontact">
+                                                    Industry:</label>
+                                            </td>
+                                            <td align="left">
+                                                <asp:DropDownList runat="server" ID="ddl" OnSelectedIndexChanged="ddl_SelectedIndexChanged"
+                                                    CssClass="textbox" AutoPostBack="True" ToolTip="Select Industry Type">
+                                                    <asp:ListItem Text="--Select--" />
+                                                    <asp:ListItem Text="Education" />
+                                                    <asp:ListItem Text="Financial Institution" />
+                                                    <asp:ListItem Text="Government" />
+                                                    <asp:ListItem Text="Health" />
+                                                    <asp:ListItem Text="ITES" />
+                                                    <asp:ListItem Text="Manufacturing" />
+                                                    <asp:ListItem Text="Media" />
+                                                    <asp:ListItem Text="Retail" />
+                                                    <asp:ListItem Text="Software" />
+                                                    <asp:ListItem Text="Telecom" />
+                                                    <asp:ListItem Text="Other" />
+                                                </asp:DropDownList>
+                                                <asp:Panel runat="server" ID="pnlother" Visible="false">
+                                                    <asp:TextBox runat="server" ID="txtOther" CssClass="textbox" ToolTip="Enter Other Industry" />
+                                                    <asp:ImageButton ImageUrl="~/images/ca.jpg" runat="server" ID="btnimgCancel" OnClick="btnimgCancel_Click"
+                                                        ImageAlign="Middle" />
+                                                </asp:Panel>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="lablecontact">
+                                                    Message:</label>
+                                            </td>
+                                            <td align="left">
+                                                <asp:TextBox runat="server" ID="txtMsg" CssClass="multitext" TextMode="MultiLine"
+                                                    ToolTip="Enter Message" />
+                                            </td>
+                                            <td>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                            </td>
+                                            <td colspan="3" align="left">
+                                                <asp:Button Text="Submit" runat="server" ID="btnSubmit" OnClick="btnSubmit_Click"
+                                                    ToolTip="Submit Your Enquiry" CssClass="btncontact" />
+                                                <asp:Button Text="Cancel" runat="server" ID="btnCancel" OnClick="btnCancel_Click"
+                                                    ToolTip="Cancel Your Enquiry" CssClass="btncontact" Style="margin-left: 5px" />
+                                            </td>
+                                            <td>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
+                    <div class="clearfix">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="footer1_bg">
+        <!-- start footer1 -->
+        <div class="container">
+            <div class="footer1">
+                <div class="copy pull-left" style="height: 55px">
+                    <ul class="menu list-unstyled">
+                       <li class="activate"><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="personal_track.html">Services</a></li>
+                        <!-- <li><a href="<%: GetRouteUrl("ProductRoute", null) %>">Products</a></li> -->
+                        <li><a href="http://www.trackmywheels.net.in/tracking" target="_blank">Login</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="soc_icons pull-right">
+                    <ul class="list-unstyled text-center">
+                        <li><a href="https://twitter.com/Trackmywheels" target="_blank"><i class="fa fa-twitter">
+                        </i></a></li>
+                        <li><a href="http://www.facebook.com/pages/Track-My-Wheels/781947395176949?ref=aymt_homepage_panel"
+                            target="_blank"><i class="fa fa-facebook"></i></a></li>
+                    </ul>
+                </div>
+                <div class="clearfix">
+                </div>
+                <b style="color: white; font-family: Times New Roman; font-size: 14px">© 2015-17 Developed
+                    by Track My Wheels Pvt Ltd. All Rights Reserved.</b>
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>
